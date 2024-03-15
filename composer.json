@@ -1,0 +1,38 @@
+{
+  "name": "khalilleo-webagentur/monolog",
+  "description": "PHP library for simple Monolog to handle any kinds of logs.",
+  "keywords": [
+    "logger",
+    "exception",
+    "log handle",
+    "logs",
+    "monolog"
+  ],
+  "homepage": "https://github.com/khalilleo-webagentur",
+  "type": "package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Khalilleo",
+      "email": "info@khalilleo.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1"
+  },
+  "require-dev": {},
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Khalilleo\\Monolog\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": []
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
