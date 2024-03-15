@@ -8,7 +8,7 @@ use RuntimeException;
 
 final class StreamHandler
 {
-    private const PATH = __DIR__ . "/../../storage/logs/";
+    private const PATH = __DIR__ . "/../../../../storage/logs/";
 
     public function append(string $message, string $level)
     {

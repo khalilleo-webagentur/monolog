@@ -6,8 +6,11 @@ namespace Khalilleo\Monolog;
 
 final class Logger implements LoggerInterface
 {
-    public function __construct(private readonly StreamHandler $streamHandler)
+    protected StreamHandler $streamHandler;
+
+    public function __construct()
     {
+        $this->streamHandler = new StreamHandler();
     }
 
     public function debug(string $message): void

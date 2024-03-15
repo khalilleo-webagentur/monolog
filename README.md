@@ -14,28 +14,39 @@ PHP library for simple Monolog to handle any kinds of logs.
 
 ```php
 
-use Khalilleo\Monolog\LoggerInterface;
+// create this service as entry point
 
-public function __construct(
-    private readonly LoggerInterface $logger
-) {
+<?php
+
+declare(strict_types=1);
+
+namespace App\Service\Core;
+
+use Khalilleo\Monolog\LoggerAbstruct;
+
+final class MonologService extends LoggerAbstruct
+{
+    //
 }
-
-$this->logger->info('Any kind of message or exception here..');
 
 ```
 
-### Example
-
 ```php
-<?php
 
-require 'vendor/autoload.php';
+// call your service 
 
-use Khalilleo\Monolog\Logger;
-use Khalilleo\Monolog\StreamHandler;
+use App\Service\MonologService;
 
-(new Logger(new StreamHandler()))->info('Any kind of message or exception here..'); // search for file `Info_2024.log`
+public function __construct(private readonly MonologService $monolog) {}
+
+
+// use monolog
+
+$this->monolog->logger->info('any message ..');
+$this->monolog->logger->debug('any message ..');
+.
+.
+
 
 ```
 
